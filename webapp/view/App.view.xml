@@ -1,0 +1,16 @@
+<mvc:View
+	controllerName="template.ui5.controller.App"
+	xmlns="sap.m"
+	height="100%"
+	xmlns:f="sap.f"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true">
+	<Shell>
+		<f:FlexibleColumnLayout
+		id="app"
+		stateChange=".onStateChanged"
+		backgroundDesign="Solid"
+		layout="{appView>/layout}">
+		</f:FlexibleColumnLayout>
+	</Shell>
+</mvc:View>

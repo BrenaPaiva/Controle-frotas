@@ -1,0 +1,19 @@
+{
+  "name": "frota",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrenaPaiva/Gest-o-de-frotas.git"
+  },
+  "author": "Brena Paiva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrenaPaiva/Gest-o-de-frotas/issues"
+  },
+  "homepage": "https://github.com/BrenaPaiva/Gest-o-de-frotas#readme"
+}

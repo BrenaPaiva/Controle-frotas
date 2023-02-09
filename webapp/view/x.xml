@@ -1,0 +1,446 @@
+<feed xmlns="http://www.w3.org/2005/Atom"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+    xml:base="http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/">
+    <id>http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/VeiculoSet</id>
+    <title type="text">VeiculoSet</title>
+    <updated>2023-02-08T13:20:10Z</updated>
+    <author>
+        <name />
+    </author>
+    <link href="VeiculoSet" rel="self" title="VeiculoSet" />
+    <entry>
+        <id>
+            http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/VeiculoSet('PPP4536')</id>
+        <title type="text">VeiculoSet('PPP4536')</title>
+        <updated>2023-02-08T13:20:10Z</updated>
+        <category term="ZFROTA_SRV.Veiculo"
+            scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+        <link href="VeiculoSet('PPP4536')" rel="self" title="Veiculo" />
+        <link href="VeiculoSet('PPP4536')/HistoricoSet"
+            rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/HistoricoSet"
+            type="application/atom+xml;type=feed" title="HistoricoSet">
+            <m:inline>
+                <feed xmlns="http://www.w3.org/2005/Atom"
+                    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+                    xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+                    xml:base="http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/">
+                    <id>
+                        http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/VeiculoSet('PPP4536')/HistoricoSet</id>
+                    <title type="text">HistoricoSet</title>
+                    <updated>2023-02-08T13:20:10Z</updated>
+                    <author>
+                        <name />
+                    </author>
+                    <link href="VeiculoSet('PPP4536')/HistoricoSet" rel="self" title="HistoricoSet" />
+                    <entry>
+                        <id>
+                            http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/HistoricoSet(CpfNumber='03909212468',Placa='PPP4536',LocacaoAte=datetime'2023-01-09T00%3A00%3A00')</id>
+                        <title type="text">
+                            HistoricoSet(CpfNumber='03909212468',Placa='PPP4536',LocacaoAte=datetime'2023-01-09T00%3A00%3A00')</title>
+                        <updated>2023-02-08T13:20:10Z</updated>
+                        <category term="ZFROTA_SRV.Historico"
+                            scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+                        <link
+                            href="HistoricoSet(CpfNumber='03909212468',Placa='PPP4536',LocacaoAte=datetime'2023-01-09T00%3A00%3A00')"
+                            rel="self" title="Historico" />
+                        <content type="application/xml">
+                            <m:properties
+                                xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+                                xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">
+                                <d:CpfNumber>03909212468</d:CpfNumber>
+                                <d:Placa>PPP4536</d:Placa>
+                                <d:LocacaoAte>2023-01-09T00:00:00</d:LocacaoAte>
+                                <d:LocacaoDe>2023-01-08T00:00:00</d:LocacaoDe>
+                                <d:Name>BRUNO BENJAMIN GONÇALVES</d:Name>
+                                <d:Canal>09</d:Canal>
+                                <d:ValMulta>0.000</d:ValMulta>
+                                <d:Obs></d:Obs>
+                                <d:StatusLoc>2</d:StatusLoc>
+                                <d:Description>Finalizado</d:Description>
+                            </m:properties>
+                        </content>
+                    </entry>
+                </feed>
+            </m:inline>
+        </link>
+        <content type="application/xml">
+            <m:properties xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+                xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">
+                <d:Nm_Placa>PPP4536</d:Nm_Placa>
+                <d:Nm_Chassi>10827Y1037271487</d:Nm_Chassi>
+                <d:Nr_Renavam>01123451343</d:Nr_Renavam>
+                <d:Nm_Modelo>FIAT TORO</d:Nm_Modelo>
+                <d:Nm_IdLoc>0001</d:Nm_IdLoc>
+                <d:Nm_Locadora>LOCALIZA</d:Nm_Locadora>
+                <d:Nr_CentroCusto></d:Nr_CentroCusto>
+                <d:Ie_StatusVeic>D</d:Ie_StatusVeic>
+                <d:Ie_StatusCrlv>R</d:Ie_StatusCrlv>
+            </m:properties>
+        </content>
+    </entry>
+    <entry>
+        <id>
+            http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/VeiculoSet('PPP4539')</id>
+        <title type="text">VeiculoSet('PPP4539')</title>
+        <updated>2023-02-08T13:20:10Z</updated>
+        <category term="ZFROTA_SRV.Veiculo"
+            scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+        <link href="VeiculoSet('PPP4539')" rel="self" title="Veiculo" />
+        <link href="VeiculoSet('PPP4539')/HistoricoSet"
+            rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/HistoricoSet"
+            type="application/atom+xml;type=feed" title="HistoricoSet">
+            <m:inline>
+                <feed xmlns="http://www.w3.org/2005/Atom"
+                    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+                    xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+                    xml:base="http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/">
+                    <id>
+                        http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/VeiculoSet('PPP4539')/HistoricoSet</id>
+                    <title type="text">HistoricoSet</title>
+                    <updated>2023-02-08T13:20:10Z</updated>
+                    <author>
+                        <name />
+                    </author>
+                    <link href="VeiculoSet('PPP4539')/HistoricoSet" rel="self" title="HistoricoSet" />
+                    <entry>
+                        <id>
+                            http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/HistoricoSet(CpfNumber='03909212468',Placa='PPP4539',LocacaoAte=datetime'2023-01-13T00%3A00%3A00')</id>
+                        <title type="text">
+                            HistoricoSet(CpfNumber='03909212468',Placa='PPP4539',LocacaoAte=datetime'2023-01-13T00%3A00%3A00')</title>
+                        <updated>2023-02-08T13:20:10Z</updated>
+                        <category term="ZFROTA_SRV.Historico"
+                            scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+                        <link
+                            href="HistoricoSet(CpfNumber='03909212468',Placa='PPP4539',LocacaoAte=datetime'2023-01-13T00%3A00%3A00')"
+                            rel="self" title="Historico" />
+                        <content type="application/xml">
+                            <m:properties
+                                xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+                                xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">
+                                <d:CpfNumber>03909212468</d:CpfNumber>
+                                <d:Placa>PPP4539</d:Placa>
+                                <d:LocacaoAte>2023-01-13T00:00:00</d:LocacaoAte>
+                                <d:LocacaoDe>2023-01-10T00:00:00</d:LocacaoDe>
+                                <d:Name>BRUNO BENJAMIN GONÇALVES</d:Name>
+                                <d:Canal>09</d:Canal>
+                                <d:ValMulta>0.000</d:ValMulta>
+                                <d:Obs></d:Obs>
+                                <d:StatusLoc>2</d:StatusLoc>
+                                <d:Description>Finalizado</d:Description>
+                            </m:properties>
+                        </content>
+                    </entry>
+                </feed>
+            </m:inline>
+        </link>
+        <content type="application/xml">
+            <m:properties xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+                xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">
+                <d:Nm_Placa>PPP4539</d:Nm_Placa>
+                <d:Nm_Chassi>10827Y1037271487</d:Nm_Chassi>
+                <d:Nr_Renavam>01123451343</d:Nr_Renavam>
+                <d:Nm_Modelo>FORD KA + PLUS 1.5</d:Nm_Modelo>
+                <d:Nm_IdLoc>0001</d:Nm_IdLoc>
+                <d:Nm_Locadora>LOCALIZA</d:Nm_Locadora>
+                <d:Nr_CentroCusto></d:Nr_CentroCusto>
+                <d:Ie_StatusVeic>D</d:Ie_StatusVeic>
+                <d:Ie_StatusCrlv>R</d:Ie_StatusCrlv>
+            </m:properties>
+        </content>
+    </entry>
+    <entry>
+        <id>
+            http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/VeiculoSet('PPP4549')</id>
+        <title type="text">VeiculoSet('PPP4549')</title>
+        <updated>2023-02-08T13:20:10Z</updated>
+        <category term="ZFROTA_SRV.Veiculo"
+            scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+        <link href="VeiculoSet('PPP4549')" rel="self" title="Veiculo" />
+        <link href="VeiculoSet('PPP4549')/HistoricoSet"
+            rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/HistoricoSet"
+            type="application/atom+xml;type=feed" title="HistoricoSet">
+            <m:inline>
+                <feed xmlns="http://www.w3.org/2005/Atom"
+                    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+                    xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+                    xml:base="http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/">
+                    <id>
+                        http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/VeiculoSet('PPP4549')/HistoricoSet</id>
+                    <title type="text">HistoricoSet</title>
+                    <updated>2023-02-08T13:20:10Z</updated>
+                    <author>
+                        <name />
+                    </author>
+                    <link href="VeiculoSet('PPP4549')/HistoricoSet" rel="self" title="HistoricoSet" />
+                    <entry>
+                        <id>
+                            http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/HistoricoSet(CpfNumber='03909212468',Placa='PPP4549',LocacaoAte=datetime'2023-01-07T00%3A00%3A00')</id>
+                        <title type="text">
+                            HistoricoSet(CpfNumber='03909212468',Placa='PPP4549',LocacaoAte=datetime'2023-01-07T00%3A00%3A00')</title>
+                        <updated>2023-02-08T13:20:10Z</updated>
+                        <category term="ZFROTA_SRV.Historico"
+                            scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+                        <link
+                            href="HistoricoSet(CpfNumber='03909212468',Placa='PPP4549',LocacaoAte=datetime'2023-01-07T00%3A00%3A00')"
+                            rel="self" title="Historico" />
+                        <content type="application/xml">
+                            <m:properties
+                                xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+                                xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">
+                                <d:CpfNumber>03909212468</d:CpfNumber>
+                                <d:Placa>PPP4549</d:Placa>
+                                <d:LocacaoAte>2023-01-07T00:00:00</d:LocacaoAte>
+                                <d:LocacaoDe>2023-01-04T00:00:00</d:LocacaoDe>
+                                <d:Name>BRUNO BENJAMIN GONÇALVES</d:Name>
+                                <d:Canal>09</d:Canal>
+                                <d:ValMulta>0.000</d:ValMulta>
+                                <d:Obs></d:Obs>
+                                <d:StatusLoc>2</d:StatusLoc>
+                                <d:Description>Finalizado</d:Description>
+                            </m:properties>
+                        </content>
+                    </entry>
+                    <entry>
+                        <id>
+                            http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/HistoricoSet(CpfNumber='03909212468',Placa='PPP4549',LocacaoAte=datetime'2023-01-18T00%3A00%3A00')</id>
+                        <title type="text">
+                            HistoricoSet(CpfNumber='03909212468',Placa='PPP4549',LocacaoAte=datetime'2023-01-18T00%3A00%3A00')</title>
+                        <updated>2023-02-08T13:20:10Z</updated>
+                        <category term="ZFROTA_SRV.Historico"
+                            scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+                        <link
+                            href="HistoricoSet(CpfNumber='03909212468',Placa='PPP4549',LocacaoAte=datetime'2023-01-18T00%3A00%3A00')"
+                            rel="self" title="Historico" />
+                        <content type="application/xml">
+                            <m:properties
+                                xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+                                xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">
+                                <d:CpfNumber>03909212468</d:CpfNumber>
+                                <d:Placa>PPP4549</d:Placa>
+                                <d:LocacaoAte>2023-01-18T00:00:00</d:LocacaoAte>
+                                <d:LocacaoDe>2023-01-16T00:00:00</d:LocacaoDe>
+                                <d:Name>BRUNO BENJAMIN GONÇALVES</d:Name>
+                                <d:Canal>09</d:Canal>
+                                <d:ValMulta>0.000</d:ValMulta>
+                                <d:Obs></d:Obs>
+                                <d:StatusLoc>2</d:StatusLoc>
+                                <d:Description>Finalizado</d:Description>
+                            </m:properties>
+                        </content>
+                    </entry>
+                </feed>
+            </m:inline>
+        </link>
+        <content type="application/xml">
+            <m:properties xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+                xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">
+                <d:Nm_Placa>PPP4549</d:Nm_Placa>
+                <d:Nm_Chassi>10827Y1037271487</d:Nm_Chassi>
+                <d:Nr_Renavam>01123451343</d:Nr_Renavam>
+                <d:Nm_Modelo>FIAT TORO 4X4 DIESEL AT</d:Nm_Modelo>
+                <d:Nm_IdLoc>0001</d:Nm_IdLoc>
+                <d:Nm_Locadora>LOCALIZA</d:Nm_Locadora>
+                <d:Nr_CentroCusto></d:Nr_CentroCusto>
+                <d:Ie_StatusVeic>D</d:Ie_StatusVeic>
+                <d:Ie_StatusCrlv>R</d:Ie_StatusCrlv>
+            </m:properties>
+        </content>
+    </entry>
+    <entry>
+        <id>
+            http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/VeiculoSet('PPP4537')</id>
+        <title type="text">VeiculoSet('PPP4537')</title>
+        <updated>2023-02-08T13:20:10Z</updated>
+        <category term="ZFROTA_SRV.Veiculo"
+            scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+        <link href="VeiculoSet('PPP4537')" rel="self" title="Veiculo" />
+        <link href="VeiculoSet('PPP4537')/HistoricoSet"
+            rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/HistoricoSet"
+            type="application/atom+xml;type=feed" title="HistoricoSet">
+            <m:inline>
+                <feed xmlns="http://www.w3.org/2005/Atom"
+                    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+                    xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+                    xml:base="http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/">
+                    <id>
+                        http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/VeiculoSet('PPP4537')/HistoricoSet</id>
+                    <title type="text">HistoricoSet</title>
+                    <updated>2023-02-08T13:20:10Z</updated>
+                    <author>
+                        <name />
+                    </author>
+                    <link href="VeiculoSet('PPP4537')/HistoricoSet" rel="self" title="HistoricoSet" />
+                    <entry>
+                        <id>
+                            http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/HistoricoSet(CpfNumber='73855500703',Placa='PPP4537',LocacaoAte=datetime'9999-12-31T00%3A00%3A00')</id>
+                        <title type="text">
+                            HistoricoSet(CpfNumber='73855500703',Placa='PPP4537',LocacaoAte=datetime'9999-12-31T00%3A00%3A00')</title>
+                        <updated>2023-02-08T13:20:10Z</updated>
+                        <category term="ZFROTA_SRV.Historico"
+                            scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+                        <link
+                            href="HistoricoSet(CpfNumber='73855500703',Placa='PPP4537',LocacaoAte=datetime'9999-12-31T00%3A00%3A00')"
+                            rel="self" title="Historico" />
+                        <content type="application/xml">
+                            <m:properties
+                                xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+                                xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">
+                                <d:CpfNumber>73855500703</d:CpfNumber>
+                                <d:Placa>PPP4537</d:Placa>
+                                <d:LocacaoAte>9999-12-31T00:00:00</d:LocacaoAte>
+                                <d:LocacaoDe>2023-01-04T00:00:00</d:LocacaoDe>
+                                <d:Name>RAIMUNDO LEVI BENJAMIN VIEIRA</d:Name>
+                                <d:Canal>09</d:Canal>
+                                <d:ValMulta>0.000</d:ValMulta>
+                                <d:Obs></d:Obs>
+                                <d:StatusLoc>1</d:StatusLoc>
+                                <d:Description>Ativo</d:Description>
+                            </m:properties>
+                        </content>
+                    </entry>
+                    <entry>
+                        <id>
+                            http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/HistoricoSet(CpfNumber='03909212468',Placa='PPP4537',LocacaoAte=datetime'9999-12-31T00%3A00%3A00')</id>
+                        <title type="text">
+                            HistoricoSet(CpfNumber='03909212468',Placa='PPP4537',LocacaoAte=datetime'9999-12-31T00%3A00%3A00')</title>
+                        <updated>2023-02-08T13:20:10Z</updated>
+                        <category term="ZFROTA_SRV.Historico"
+                            scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+                        <link
+                            href="HistoricoSet(CpfNumber='03909212468',Placa='PPP4537',LocacaoAte=datetime'9999-12-31T00%3A00%3A00')"
+                            rel="self" title="Historico" />
+                        <content type="application/xml">
+                            <m:properties
+                                xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+                                xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">
+                                <d:CpfNumber>03909212468</d:CpfNumber>
+                                <d:Placa>PPP4537</d:Placa>
+                                <d:LocacaoAte>9999-12-31T00:00:00</d:LocacaoAte>
+                                <d:LocacaoDe>2023-01-16T00:00:00</d:LocacaoDe>
+                                <d:Name>BRUNO BENJAMIN GONÇALVES</d:Name>
+                                <d:Canal>09</d:Canal>
+                                <d:ValMulta>0.000</d:ValMulta>
+                                <d:Obs></d:Obs>
+                                <d:StatusLoc>1</d:StatusLoc>
+                                <d:Description>Ativo</d:Description>
+                            </m:properties>
+                        </content>
+                    </entry>
+                </feed>
+            </m:inline>
+        </link>
+        <content type="application/xml">
+            <m:properties xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+                xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">
+                <d:Nm_Placa>PPP4537</d:Nm_Placa>
+                <d:Nm_Chassi>10827Y1037271487</d:Nm_Chassi>
+                <d:Nr_Renavam>01123451343</d:Nr_Renavam>
+                <d:Nm_Modelo>VW VIRTUS</d:Nm_Modelo>
+                <d:Nm_IdLoc>0002</d:Nm_IdLoc>
+                <d:Nm_Locadora>UNIDAS</d:Nm_Locadora>
+                <d:Nr_CentroCusto></d:Nr_CentroCusto>
+                <d:Ie_StatusVeic>D</d:Ie_StatusVeic>
+                <d:Ie_StatusCrlv>R</d:Ie_StatusCrlv>
+            </m:properties>
+        </content>
+    </entry>
+    <entry>
+        <id>
+            http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/VeiculoSet('PPP4538')</id>
+        <title type="text">VeiculoSet('PPP4538')</title>
+        <updated>2023-02-08T13:20:10Z</updated>
+        <category term="ZFROTA_SRV.Veiculo"
+            scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+        <link href="VeiculoSet('PPP4538')" rel="self" title="Veiculo" />
+        <link href="VeiculoSet('PPP4538')/HistoricoSet"
+            rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/HistoricoSet"
+            type="application/atom+xml;type=feed" title="HistoricoSet">
+            <m:inline>
+                <feed xmlns="http://www.w3.org/2005/Atom"
+                    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+                    xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+                    xml:base="http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/">
+                    <id>
+                        http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/VeiculoSet('PPP4538')/HistoricoSet</id>
+                    <title type="text">HistoricoSet</title>
+                    <updated>2023-02-08T13:20:10Z</updated>
+                    <author>
+                        <name />
+                    </author>
+                    <link href="VeiculoSet('PPP4538')/HistoricoSet" rel="self" title="HistoricoSet" />
+                    <entry>
+                        <id>
+                            http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/HistoricoSet(CpfNumber='03909212468',Placa='PPP4538',LocacaoAte=datetime'2023-01-15T00%3A00%3A00')</id>
+                        <title type="text">
+                            HistoricoSet(CpfNumber='03909212468',Placa='PPP4538',LocacaoAte=datetime'2023-01-15T00%3A00%3A00')</title>
+                        <updated>2023-02-08T13:20:10Z</updated>
+                        <category term="ZFROTA_SRV.Historico"
+                            scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+                        <link
+                            href="HistoricoSet(CpfNumber='03909212468',Placa='PPP4538',LocacaoAte=datetime'2023-01-15T00%3A00%3A00')"
+                            rel="self" title="Historico" />
+                        <content type="application/xml">
+                            <m:properties
+                                xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+                                xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">
+                                <d:CpfNumber>03909212468</d:CpfNumber>
+                                <d:Placa>PPP4538</d:Placa>
+                                <d:LocacaoAte>2023-01-15T00:00:00</d:LocacaoAte>
+                                <d:LocacaoDe>2023-01-14T00:00:00</d:LocacaoDe>
+                                <d:Name>BRUNO BENJAMIN GONÇALVES</d:Name>
+                                <d:Canal>09</d:Canal>
+                                <d:ValMulta>0.000</d:ValMulta>
+                                <d:Obs></d:Obs>
+                                <d:StatusLoc>2</d:StatusLoc>
+                                <d:Description>Finalizado</d:Description>
+                            </m:properties>
+                        </content>
+                    </entry>
+                    <entry>
+                        <id>
+                            http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/HistoricoSet(CpfNumber='73855500703',Placa='PPP4538',LocacaoAte=datetime'2023-01-03T00%3A00%3A00')</id>
+                        <title type="text">
+                            HistoricoSet(CpfNumber='73855500703',Placa='PPP4538',LocacaoAte=datetime'2023-01-03T00%3A00%3A00')</title>
+                        <updated>2023-02-08T13:20:10Z</updated>
+                        <category term="ZFROTA_SRV.Historico"
+                            scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+                        <link
+                            href="HistoricoSet(CpfNumber='73855500703',Placa='PPP4538',LocacaoAte=datetime'2023-01-03T00%3A00%3A00')"
+                            rel="self" title="Historico" />
+                        <content type="application/xml">
+                            <m:properties
+                                xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+                                xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">
+                                <d:CpfNumber>73855500703</d:CpfNumber>
+                                <d:Placa>PPP4538</d:Placa>
+                                <d:LocacaoAte>2023-01-03T00:00:00</d:LocacaoAte>
+                                <d:LocacaoDe>2022-12-01T00:00:00</d:LocacaoDe>
+                                <d:Name>RAIMUNDO LEVI BENJAMIN VIEIRA</d:Name>
+                                <d:Canal>09</d:Canal>
+                                <d:ValMulta>0.000</d:ValMulta>
+                                <d:Obs></d:Obs>
+                                <d:StatusLoc>2</d:StatusLoc>
+                                <d:Description>Finalizado</d:Description>
+                            </m:properties>
+                        </content>
+                    </entry>
+                </feed>
+            </m:inline>
+        </link>
+        <content type="application/xml">
+            <m:properties xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+                xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">
+                <d:Nm_Placa>PPP4538</d:Nm_Placa>
+                <d:Nm_Chassi>10827Y1037271487</d:Nm_Chassi>
+                <d:Nr_Renavam>01123451343</d:Nr_Renavam>
+                <d:Nm_Modelo>RENAULT CAPTUR</d:Nm_Modelo>
+                <d:Nm_IdLoc>0002</d:Nm_IdLoc>
+                <d:Nm_Locadora>UNIDAS</d:Nm_Locadora>
+                <d:Nr_CentroCusto></d:Nr_CentroCusto>
+                <d:Ie_StatusVeic>D</d:Ie_StatusVeic>
+                <d:Ie_StatusCrlv>R</d:Ie_StatusCrlv>
+            </m:properties>
+        </content>
+    </entry>
+</feed>

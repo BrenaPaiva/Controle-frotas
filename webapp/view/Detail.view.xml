@@ -1,0 +1,126 @@
+<mvc:View
+	controllerName="template.ui5.controller.Detail"
+	xmlns="sap.uxap"
+	xmlns:m="sap.m"
+	xmlns:f="sap.f"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc">
+	<ObjectPageLayout
+		id="ObjectPageLayout"
+		showTitleInHeaderContent="true"
+		alwaysShowContentHeader="false"
+		preserveHeaderStateOnScroll="false"
+		headerContentPinnable="true"
+		isChildPage="true"
+		upperCaseAnchorBar="false">
+		<!--Cabeçalho -->
+		<headerTitle>
+			<ObjectPageDynamicHeaderTitle>
+				<actions>
+					<m:Button
+						text="Copy"
+						type="Transparent"/>
+					<m:Button
+						icon="sap-icon://action"
+						type="Transparent"/>
+				</actions>
+			</ObjectPageDynamicHeaderTitle>
+		</headerTitle>
+		<!-- Segundo cabeçalho-->
+		<headerContent>
+			<f:Avatar
+					src=""
+					displaySize="L"
+					displayShape="Square"
+					class="sapUiTinyMarginEnd">
+				</f:Avatar>
+			<m:VBox justifyContent="Center" class="sapUiSmallMarginEnd">
+				<m:Label text="Modelo do veículo"/>
+				<m:Text text="{CustomerID}"/>
+			</m:VBox>
+			<m:VBox justifyContent="Center" class="sapUiSmallMarginEnd">
+					<m:Label text="Placa"/>
+					<m:Text text="{CompanyName}"/>
+				</m:VBox>
+				<m:VBox justifyContent="Center" class="sapUiSmallMarginEnd">
+					<m:Label text="Locadora"/>
+					<m:Text text="{ContactTitle}"/>
+				</m:VBox>
+		</headerContent>
+		<!-- Sections- Meu corpo-->
+		<sections>
+			<ObjectPageSection
+			title="Informações do veículo">
+				<subSections>
+					<ObjectPageSubSection>
+						<blocks >
+							<form:SimpleForm
+								maxContainerCols="2"
+								editable="false"
+								layout="ResponsiveGridLayout"
+								labelSpanL="12"
+								labelSpanM="12"
+								emptySpanL="0"
+								emptySpanM="0"
+								columnsL="1"
+								columnsM="1">
+								<form:content >
+										<m:Label text="Nome"/>
+									<m:Text text="{Orders}"/>
+										<m:Label text="Veiculo"/>
+										<m:Text text="{ContactTitle}"/>
+								</form:content>
+							</form:SimpleForm>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+			<ObjectPageSection title="Relatórios">
+				<subSections>
+					<ObjectPageSubSection>
+						<blocks>
+							<m:Table
+								id="suppliersTable">
+								<m:columns>
+									<m:Column/>
+								</m:columns>
+								<m:items >
+									<m:ColumnListItem type="Navigation" press=".onSupplierPress">
+										<m:cells>
+											<m:ObjectIdentifier title="Detalhes do Condutor" id="detalhes"/>
+										</m:cells>
+									</m:ColumnListItem>
+									<m:ColumnListItem type="Navigation" press=".onSupplierPress">
+										<m:cells>
+											<m:ObjectIdentifier title="Informações do Veículo" />
+										</m:cells>
+									</m:ColumnListItem>
+									<m:ColumnListItem type="Navigation" press=".onSupplierPress">
+										<m:cells>
+											<m:ObjectIdentifier title="Histórico"/>
+										</m:cells>
+									</m:ColumnListItem>
+									<m:ColumnListItem type="Navigation" press=".onSupplierPress">
+										<m:cells>
+											<m:ObjectIdentifier title="Locadora"/>
+										</m:cells>
+									</m:ColumnListItem>
+
+								</m:items>
+							</m:Table>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+		</sections>
+		<footer>
+			<m:OverflowToolbar>
+				<m:ToolbarSpacer/>
+				<m:Button type="Accept" text="Save"/>
+				<m:Button type="Reject" text="Cancel"/>
+			</m:OverflowToolbar>
+		</footer>
+	</ObjectPageLayout>
+</mvc:View>
