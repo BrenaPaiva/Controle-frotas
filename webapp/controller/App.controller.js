@@ -6,7 +6,7 @@ sap.ui.define([
 ], function (BaseController, JSONModel, Controller, utils) {
 	"use strict";
 
-	return BaseController.extend("gestaoFrota.controller.App", {
+	return BaseController.extend("template.ui5.controller.App", {
 
 		onInit: function () {
 			this.oOwnerComponent = this.getOwnerComponent();

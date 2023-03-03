@@ -13,9 +13,8 @@ sap.ui.define([
 			this.oRouter = oOwnerComponent.getRouter();
 			this.oModel = oOwnerComponent.getModel();
 
-			this.oRouter.getRoute("master").attachPatternMatched(this._onProductMatched, this);
+			//this.oRouter.getRoute("master").attachPatternMatched(this._onProductMatched, this);
 			this.oRouter.getRoute("detail").attachPatternMatched(this._onProductMatched, this);
-			this.oRouter.getRoute("detailDetail").attachPatternMatched(this._onProductMatched, this);
 		},
 		onSupplierPress: function (oEvent) {
 			var sPath = oEvent.getSource().getBindingContext().getPath(),
@@ -32,6 +31,7 @@ sap.ui.define([
 				path: "/" + this._product
 			});
 		},
+		
 		onEditToggleButtonPress: function() {
 			var oObjectPage = this.getView().byId("ObjectPageLayout"),
 				bCurrentShowFooterState = oObjectPage.getShowFooter();
@@ -41,7 +41,14 @@ sap.ui.define([
 		onDelete: function () {
 			MessageBox.information("This functionality is not ready yet.", { title: "Aw, Snap!" });
 		},
-
+		handleClose: function () {
+			var sNextLayout = this.oModel.getProperty("/actionButtonsInfo/midColumn/closeColumn");
+			this.oRouter.navTo("master", {layout: sNextLayout});
+		},
+		handleFullScreen: function () {
+			var sNextLayout = this.oModel.getProperty("/actionButtonsInfo/endColumn/fullScreen");
+			this.oRouter.navTo("detail", {layout: sNextLayout});
+		},
 
 		///CHAMANDO A MINHA ENTIDADE EM JAVASCRIPT
 		// entities: function () {
@@ -60,8 +67,8 @@ sap.ui.define([
 		// 	},)
 		// },
         onExit: function () {
-            this.oRouter.getRoute("master").detachPatternMatched(this._onProductMatched, this);
-            this.oRouter.getRoute("detail").detachPatternMatched(this._onProductMatched, this);
+            // this.oRouter.getRoute("master").detachPatternMatched(this._onProductMatched, this);
+            // this.oRouter.getRoute("detail").detachPatternMatched(this._onProductMatched, this);
         }
 	});
 });

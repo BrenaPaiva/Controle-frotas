@@ -95,15 +95,6 @@
 						"master",
 						"detail"
 					]
-				},
-				{
-					"pattern": "detailDetail/{informacoes}/{layout}",
-					"name": "detailDetail",
-					"target": [
-						"master",
-						"detail",
-						"detailDetail"
-					]
 				}
 			],
 			"targets": {
@@ -116,10 +107,6 @@
 					"name": "Detail",
 					"controlAggregation": "midColumnPages",
 					"viewName": "Detail"
-				},
-				"detailDetail": {
-					"name": "DetailDetail",
-					"controlAggregation": "endColumnPages"
 				}
 			}
 		
