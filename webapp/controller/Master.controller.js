@@ -18,7 +18,7 @@ sap.ui.define([
 			this.getRouter().getRoute("master").attachPatternMatched(this._onMasterMatched, this);
 			this.oView = this.getView();
 			this._bDescendingSort = false;
-			this.oProductsTable = this.oView.byId("productTable");
+			this.oProductsTable = this.oView.byId("productsTable");
 			this.oRouter = this.getOwnerComponent().getRouter();
 		
 		},
@@ -32,7 +32,7 @@ sap.ui.define([
 				sQuery = oEvent.getParameter("query");
 
 			if (sQuery && sQuery.length > 0) {
-				oTableSearchState = [new Filter("Name", FilterOperator.Contains, sQuery)];
+				oTableSearchState = [new Filter("ContactName", FilterOperator.Contains, sQuery)];
 			}
 
 			this.oProductsTable.getBinding("items").filter(oTableSearchState, "Application");
@@ -40,7 +40,7 @@ sap.ui.define([
 		onSort: function () {
 			this._bDescendingSort = !this._bDescendingSort;
 			var oBinding = this.oProductsTable.getBinding("items"),
-				oSorter = new Sorter("Name", this._bDescendingSort);
+				oSorter = new Sorter("ContactName", this._bDescendingSort);
 
 			oBinding.sort(oSorter);
 		},

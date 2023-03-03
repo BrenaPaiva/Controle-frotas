@@ -52,14 +52,14 @@
 								columnsL="1"
 								columnsM="1">
 								<form:content>
-									<m:Label text="Modelo" />
-									<m:Text text="{St_Modelo}" />
-									<m:Label text="Placa" />
-									<m:Text text="{Nr_Placa}" />
-									<m:Label text="Locadora" />
-									<m:Text text="{Ds_Locadora}" />
-									<m:Label text="ID Locadora" />
-									<m:Text text="{St_IdLoc}" />
+									<m:Label text="Nome da compania" />
+									<m:Text text="{CompanyName}" />
+									<m:Label text="CEP" />
+									<m:Text text="{PostalCode}" />
+									<m:Label text="Nome para contato" />
+									<m:Text text="{ContactName}" />
+									<m:Label text="Cidade" />
+									<m:Text text="{City}" />
 									<!-- <m:Label text="Nome"/>
 										<m:Text  text="{HistoricoSet}"/>  -->
 								</form:content>
@@ -71,27 +71,27 @@
 
 			<ObjectPageSection
 				title="Condutores"
-				items="{HistoricoSet}">
+				items="{Orders}">
 				<subSections>
 					<ObjectPageSubSection>
 						<blocks>
-							<m:List items="{HistoricoSet}">
+							<m:List items="{Orders}">
 								<m:ObjectListItem
-									title="{Name}"
-									number="{ValMulta}">
+									title="{CustomerID}"
+									number="{OrderID}">
 									<m:firstStatus>
 										<m:ObjectStatus
-											text="{Description}"
+											text="{ShipCountry}"
 											state="Success" />
 									</m:firstStatus>
-									<m:ObjectAttribute title="CPF" />
-									<m:ObjectAttribute text="{CpfNumber}" />
-									<m:ObjectAttribute title="Placa" />
-									<m:ObjectAttribute text="{Placa}" />
-									<m:ObjectAttribute title="Data Início" />
-									<m:ObjectAttribute text="{LocacaoDe}" />
+									<m:ObjectAttribute title="Origem" />
+									<m:ObjectAttribute text="{ShipName}" />
+									<m:ObjectAttribute title="Endereço" />
+									<m:ObjectAttribute text="{ShipAddress}" />
+									<m:ObjectAttribute title="Cidade" />
+									<m:ObjectAttribute text="{ShipCity}" />
 									<m:ObjectAttribute title="Data fim" />
-									<m:ObjectAttribute text="{LocacaoAte}" />
+									<m:ObjectAttribute text="{OrderDate}" />
 								</m:ObjectListItem>
 							</m:List>
 							
