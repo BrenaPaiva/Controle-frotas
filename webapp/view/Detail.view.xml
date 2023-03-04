@@ -18,8 +18,22 @@
 			<ObjectPageDynamicHeaderTitle>
 				<actions>
 					<m:Button
+						id="edit"
 						text="Editar"
-						type="Transparent" />
+						type="Transparent" 
+						press=".handleEditPress"
+						enabled="false"/>
+					<m:Button 
+						id="save"
+					 	text="Salvar"
+						type="Emphasized"
+						visible="false"
+						press="handleSavePress" />
+					<m:Button 
+						id="cancel"
+						text="Cancel"
+						visible="false"
+						press="handleCancelPress" />
 					<m:Button
 						icon="sap-icon://decline"
 						type="Transparent"

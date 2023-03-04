@@ -1,8 +1,9 @@
 sap.ui.define([
 	"./BaseController",
+	'sap/ui/core/Fragment',
 	"sap/m/MessageBox",
 	'sap/f/library'	
-], function (BaseController, MessageBox,  fioriLibrary) {
+], function (BaseController, Fragment, MessageBox,  fioriLibrary) {
 	"use strict";
 
     return BaseController.extend("template.ui5.controller.Detail", {
@@ -12,6 +13,10 @@ sap.ui.define([
 
 			this.oRouter = oOwnerComponent.getRouter();
 			this.oModel = oOwnerComponent.getModel();
+			this._formFragments = {};
+
+				// Set the initial form to be the display one
+				this._showFormFragment("Display");
 
 			//this.oRouter.getRoute("master").attachPatternMatched(this._onProductMatched, this);
 			this.oRouter.getRoute("detail").attachPatternMatched(this._onProductMatched, this);
@@ -21,6 +26,66 @@ sap.ui.define([
 				sInfo = sPath.replace("/", "");
 
 			this.oRouter.navTo("detailDetail", {layout: fioriLibrary.LayoutType.ThreeColumnsMidExpanded, informacoes: sInfo, informacoes: this._product});
+		},
+		
+		handleEditPress : function () {
+
+			//Clone the data
+			this._oSupplier = Object.assign({}, this.getView().getModel().getData().Customers[0]);
+			this._toggleButtonsAndView(true);
+
+		},
+
+		handleCancelPress : function () {
+
+			//Restore the data
+			var oModel = this.getView().getModel();
+			var oData = oModel.getData();
+
+			oData.Customers[0] = this._oSupplier;
+
+			oModel.setData(oData);
+			this._toggleButtonsAndView(false);
+
+		},
+		handleSavePress : function () {
+
+			this._toggleButtonsAndView(false);
+
+		},
+		_toggleButtonsAndView : function (bEdit) {
+			var oView = this.getView();
+
+			// Show the appropriate action buttons
+			oView.byId("edit").setVisible(!bEdit);
+			oView.byId("save").setVisible(bEdit);
+			oView.byId("cancel").setVisible(bEdit);
+
+			// Set the right form type
+			this._showFormFragment(bEdit ? "Change" : "Display");
+		},
+
+		_getFormFragment: function (sFragmentName) {
+			var pFormFragment = this._formFragments[sFragmentName],
+				oView = this.getView();
+
+			if (!pFormFragment) {
+				pFormFragment = Fragment.load({
+					id: oView.getId(),
+					name: "template.ui5.controller" + sFragmentName
+				});
+				this._formFragments[sFragmentName] = pFormFragment;
+			}
+
+			return pFormFragment;
+		},
+		_showFormFragment : function (sFragmentName) {
+			var oPage = this.byId("object");
+
+			// oPage.removeAllContent();
+			this._getFormFragment(sFragmentName).then(function(oVBox){
+				oPage.insertContent(oVBox);
+			});
 		},
 		_onProductMatched: function (oEvent) {
 
@@ -49,23 +114,6 @@ sap.ui.define([
 			var sNextLayout = this.oModel.getProperty("/actionButtonsInfo/endColumn/fullScreen");
 			this.oRouter.navTo("detail", {layout: sNextLayout});
 		},
-
-		///CHAMANDO A MINHA ENTIDADE EM JAVASCRIPT
-		// entities: function () {
-		// 	var oModel = new sap.ui.model.odata.v2.ODataModel("http://sqap20.uniaoquimica.com.br:8000/sap/opu/odata/sap/ZFROTA_SRV/");
-		// 	var OData = oModel.getData("/<VeiculoSet>")
-		// 	OData.read("", {
-		// 		urlParameters: {
-		// 			"$expand": "<HistoricoSet>"
-		// 		},
-		// 		success: function (data) {
-		// 			console.log(data);
-		// 		},
-		// 		error: function (error) {
-		// 			console.log(error);
-		// 		}
-		// 	},)
-		// },
         onExit: function () {
             // this.oRouter.getRoute("master").detachPatternMatched(this._onProductMatched, this);
             // this.oRouter.getRoute("detail").detachPatternMatched(this._onProductMatched, this);
