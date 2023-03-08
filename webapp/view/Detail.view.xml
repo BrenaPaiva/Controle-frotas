@@ -18,11 +18,11 @@
 			<ObjectPageDynamicHeaderTitle>
 				<actions>
 					<m:Button
+						text="{i18n>editar}"
 						id="edit"
-						text="Editar"
-						type="Transparent" 
-						press=".handleEditPress"
-						enabled="false"/>
+						type="Transparent"
+						enable="false"
+						press=".handleEditPress" />
 					<m:Button 
 						id="save"
 					 	text="Salvar"

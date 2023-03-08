@@ -1,0 +1,52 @@
+<mvc:View
+  controllerName="template.ui5.controller.Edit"
+  xmlns="sap.m"
+  xmlns:f="sap.f"
+  xmlns:form="sap.ui.layout.form"
+  xmlns:mvc="sap.ui.core.mvc">
+
+  <Page
+    id="PageEdit"
+    title="Floating Footer Example"
+    showNavButton="true"
+    navButtonPress=".onEdit"
+    floatingFooter="true"
+    class="sapUiResponsivePadding--header sapUiResponsivePadding--content sapUiResponsivePadding--footer sapUiResponsivePadding--floatingFooter">
+
+    <form:SimpleForm
+      maxContainerCols="2"
+      editable="false"
+      layout="ResponsiveGridLayout"
+      labelSpanL="12"
+      labelSpanM="12"
+      emptySpanL="0"
+      emptySpanM="0"
+      columnsL="1"
+      columnsM="1">
+      <form:content>
+        <Label text="{i18n>Modelo}" />
+        <Input value="{St_Modelo}" />
+        <Label text="{i18n>Placa}" />
+        <Input value="{Nr_Placa}" id="placa" />
+        <Label text="{i18n>Locadora}" />
+        <Input value="{Ds_Locadora}" />
+        <Label text="{i18n>IDLocadora}" />
+        <Input value="{St_IdLoc}" />
+        <Label text="{i18n>Chassi}" />
+        <Input value="{Nr_Chassi}" />
+        <Label text="{i18n>Renavam}" />
+        <Input value="{Nr_Renavam}" />
+        <Label text="{i18n>Status}" />
+        <Input value="{Nr_Chassi}" />
+      </form:content>
+
+    </form:SimpleForm>
+    <footer>
+      <OverflowToolbar>
+        <ToolbarSpacer />
+        <Button type="Accept" text="Accept" press=".savePress"/>
+        <Button type="Reject" text="Reject" press=".onEdit" />
+      </OverflowToolbar>
+    </footer>
+  </Page>
+</mvc:View>

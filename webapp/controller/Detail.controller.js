@@ -2,24 +2,35 @@ sap.ui.define([
 	"./BaseController",
 	'sap/ui/core/Fragment',
 	"sap/m/MessageBox",
-	'sap/f/library'	
+	'sap/f/library',
+	
 ], function (BaseController, Fragment, MessageBox,  fioriLibrary) {
 	"use strict";
 
     return BaseController.extend("template.ui5.controller.Detail", {
         
-        onInit: function () {
+		onInit: function () {
+
+			var oModel 
+			this.getView().setModel(oModel);
+
+			this.getView().bindElement("/VeiculoSet");
+
+			this._formFragments = {};
+
 			var oOwnerComponent = this.getOwnerComponent();
 
 			this.oRouter = oOwnerComponent.getRouter();
 			this.oModel = oOwnerComponent.getModel();
-			this._formFragments = {};
+			this.getView().bindElement("/VeiculoSet");
+			
 
 				// Set the initial form to be the display one
-				this._showFormFragment("Display");
+				this._showFormFragment("Change");
 
 			//this.oRouter.getRoute("master").attachPatternMatched(this._onProductMatched, this);
 			this.oRouter.getRoute("detail").attachPatternMatched(this._onProductMatched, this);
+			
 		},
 		onSupplierPress: function (oEvent) {
 			var sPath = oEvent.getSource().getBindingContext().getPath(),
@@ -28,11 +39,15 @@ sap.ui.define([
 			this.oRouter.navTo("detailDetail", {layout: fioriLibrary.LayoutType.ThreeColumnsMidExpanded, informacoes: sInfo, informacoes: this._product});
 		},
 		
-		handleEditPress : function () {
+		handleEditPress: function () {
+			
+			var sPath = this.getView().getElementBinding().getPath(),
+				sVeiculo = sPath.replace("/", "");
 
-			//Clone the data
-			this._oSupplier = Object.assign({}, this.getView().getModel().getData().Customers[0]);
-			this._toggleButtonsAndView(true);
+			this.oRouter.navTo("edit", {veiculo: sVeiculo});
+		
+			//this._oVehicle = Object.assign({}, this.getView().getModel().getData("VeiculoSet"));
+			//this._toggleButtonsAndView(true);
 
 		},
 
@@ -40,9 +55,10 @@ sap.ui.define([
 
 			//Restore the data
 			var oModel = this.getView().getModel();
+
 			var oData = oModel.getData();
 
-			oData.Customers[0] = this._oSupplier;
+			oData = this._oVehicle;
 
 			oModel.setData(oData);
 			this._toggleButtonsAndView(false);
@@ -62,7 +78,7 @@ sap.ui.define([
 			oView.byId("cancel").setVisible(bEdit);
 
 			// Set the right form type
-			this._showFormFragment(bEdit ? "Change" : "Display");
+			this._showFormFragment(bEdit ? "Change" : "Detail");
 		},
 
 		_getFormFragment: function (sFragmentName) {
@@ -72,7 +88,7 @@ sap.ui.define([
 			if (!pFormFragment) {
 				pFormFragment = Fragment.load({
 					id: oView.getId(),
-					name: "template.ui5.controller" + sFragmentName
+					name: "gestaoFrota.Fragments.Change"
 				});
 				this._formFragments[sFragmentName] = pFormFragment;
 			}
@@ -83,9 +99,9 @@ sap.ui.define([
 			var oPage = this.byId("object");
 
 			// oPage.removeAllContent();
-			this._getFormFragment(sFragmentName).then(function(oVBox){
-				oPage.insertContent(oVBox);
-			});
+			// this._getFormFragment(sFragmentName).then(function(oVBox){
+			// 	oPage.insertContent(oVBox);
+			// });
 		},
 		_onProductMatched: function (oEvent) {
 

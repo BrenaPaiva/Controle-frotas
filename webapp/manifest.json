@@ -95,6 +95,13 @@
 						"master",
 						"detail"
 					]
+				},
+				{
+					"pattern": "Edit/{veiculo}",
+					"name": "edit",
+					"target": [
+						"edit"
+					]
 				}
 			],
 			"targets": {
@@ -107,6 +114,10 @@
 					"name": "Detail",
 					"controlAggregation": "midColumnPages",
 					"viewName": "Detail"
+				},
+				"edit": {
+					"name": "Edit",
+					"controlAggregation": "midColumnPages"
 				}
 			}
 		
