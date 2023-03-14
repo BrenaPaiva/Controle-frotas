@@ -23,17 +23,18 @@
 						type="Transparent"
 						enable="false"
 						press=".handleEditPress" />
-					<m:Button 
+						<m:Button
+						text="Salvar"
 						id="save"
-					 	text="Salvar"
-						type="Emphasized"
+						type="Transparent"
 						visible="false"
-						press="handleSavePress" />
-					<m:Button 
+						press=".handleSavePress" />
+						<m:Button
+						text="Cancelar"
 						id="cancel"
-						text="Cancel"
+						type="Transparent"
 						visible="false"
-						press="handleCancelPress" />
+						press=".handleCancelPress" />
 					<m:Button
 						icon="sap-icon://decline"
 						type="Transparent"
@@ -66,16 +67,22 @@
 								columnsL="1"
 								columnsM="1">
 								<form:content>
-									<m:Label text="Nome da compania" />
-									<m:Text text="{CompanyName}" />
-									<m:Label text="CEP" />
-									<m:Text text="{PostalCode}" />
-									<m:Label text="Nome para contato" />
-									<m:Text text="{ContactName}" />
-									<m:Label text="Cidade" />
-									<m:Text text="{City}" />
-									<!-- <m:Label text="Nome"/>
-										<m:Text  text="{HistoricoSet}"/>  -->
+									<m:Label text="Placa"/>
+									<m:Text text="{Nr_Placa}"  id="modelo" />
+									<m:Label text="Chassi" />
+									<m:Text text="{Nr_Chassi}" id="placa"/>
+									<m:Label text="Renavam" />
+									<m:Text text="{Nr_Renavam}" />
+									<m:Label text="Modelo" />
+									<m:Text text="{St_Modelo}" />
+									<m:Label text="Locadora"/>
+									<m:Text text="{Ds_Locadora}" />
+									<m:Label text="Centro de custo"/>
+									<m:Text text="{Nr_CentroCusto}" />
+									<m:Label text="Status do veículo"/>
+									<m:Text text="{Ds_DescStatusVeic}"/>
+									<m:Label text="Status CRLV"/>
+									<m:Text text="{Ds_DescStatusCrlv}"/>
 								</form:content>
 							</form:SimpleForm>
 						</blocks>
@@ -84,28 +91,38 @@
 			</ObjectPageSection>
 
 			<ObjectPageSection
-				title="Condutores"
-				items="{Orders}">
+				title="Histórico de Condutores"
+				items="{HistoricoSet}">
 				<subSections>
 					<ObjectPageSubSection>
 						<blocks>
-							<m:List items="{Orders}">
+							<m:List 
+								items="{HistoricoSet}"
+								class="sapUiResponsiveMargin"
+								width="auto"
+								>
 								<m:ObjectListItem
-									title="{CustomerID}"
-									number="{OrderID}">
+									title="{Name}"
+									number="{ValMulta}"
+									type="Navigation"
+									press=".onPress">
 									<m:firstStatus>
 										<m:ObjectStatus
-											text="{ShipCountry}"
+											text="{Description}"
 											state="Success" />
 									</m:firstStatus>
-									<m:ObjectAttribute title="Origem" />
-									<m:ObjectAttribute text="{ShipName}" />
-									<m:ObjectAttribute title="Endereço" />
-									<m:ObjectAttribute text="{ShipAddress}" />
-									<m:ObjectAttribute title="Cidade" />
-									<m:ObjectAttribute text="{ShipCity}" />
+									<m:ObjectAttribute title="CPF" />
+									<m:ObjectAttribute text="{CpfNumber}" />
+									<m:ObjectAttribute title="Placa" />
+									<m:ObjectAttribute text="{Placa}" />
+									<m:ObjectAttribute title="Data Início" id="dataInicio" />
+									<m:ObjectAttribute text="{LocacaoDe}" />
 									<m:ObjectAttribute title="Data fim" />
-									<m:ObjectAttribute text="{OrderDate}" />
+									<m:ObjectAttribute text="{LocacaoAte}" id="dataFim" />
+									<m:ObjectAttribute title="Status Crlv" />
+									<m:ObjectAttribute text="{Ds_DescStatusCrlv}"/>
+									<m:ObjectAttribute title="Status do veículo" />
+									<m:ObjectAttribute text="{Ds_DescStatusVeic}" />
 								</m:ObjectListItem>
 							</m:List>
 							
@@ -114,12 +131,12 @@
 				</subSections>
 			</ObjectPageSection>
 		</sections>
-		<footer>
+		<!-- <footer>
 			<m:OverflowToolbar>
 				<m:ToolbarSpacer />
-				<m:Button type="Accept" text="Save" />
-				<m:Button type="Reject" text="Cancel" />
+				<m:Button type="Salvar" text="Save" />
+				<m:Button type="Cancelar" text="Cancel" />
 			</m:OverflowToolbar>
-		</footer>
+		</footer> -->
 	</ObjectPageLayout>
 </mvc:View>

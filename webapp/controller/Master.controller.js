@@ -32,7 +32,8 @@ sap.ui.define([
 				sQuery = oEvent.getParameter("query");
 
 			if (sQuery && sQuery.length > 0) {
-				oTableSearchState = [new Filter("ContactName", FilterOperator.Contains, sQuery)];
+				oTableSearchState = [new Filter("St_Modelo", FilterOperator.Contains, sQuery)];
+
 			}
 
 			this.oProductsTable.getBinding("items").filter(oTableSearchState, "Application");
@@ -40,7 +41,7 @@ sap.ui.define([
 		onSort: function () {
 			this._bDescendingSort = !this._bDescendingSort;
 			var oBinding = this.oProductsTable.getBinding("items"),
-				oSorter = new Sorter("ContactName", this._bDescendingSort);
+				oSorter = new Sorter("St_Modelo", this._bDescendingSort);
 
 			oBinding.sort(oSorter);
 		},
@@ -52,7 +53,39 @@ sap.ui.define([
 				this.oRouter.navTo("detail", { layout: fioriLibrary.LayoutType.TwoColumnsMidExpanded, veiculo: sVeiculo });
 				return sVeiculo
 
-		}
+		},
+		// StatusIcon: function () {
+		// 	list.bindAggregation("items", {
+
+		// 		path:"/HistoricoSet",
+		// 		template: new sap.m.StandardListItem({
+				
+		// 		icon: sap.ui.core.IconPool.getIconURI('accept'),
+				
+		// 		type : sap.m.ListType.Navigation,
+				
+		// 		title: '{}',
+				
+		// 		// description: '{Parameter2}',
+				
+		// 		// info: '{CurrentParameter3}',
+				
+		// 		tap: function(evt){}
+				
+		// 		})
+				
+		// 		});
+								
+		// 		if (icon == "path") {
+				
+		// 		icon : sap.ui.core.IconPool.getIconURI('accept')
+				
+		// 		} else {
+				
+		// 		icon : sap.ui.core.IconPool.getIconURI('alert')
+				
+		// 		}
+		// }
 	})
 
 });

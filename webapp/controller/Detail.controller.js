@@ -46,8 +46,6 @@ sap.ui.define([
 
 			this.oRouter.navTo("edit", {veiculo: sVeiculo});
 		
-			//this._oVehicle = Object.assign({}, this.getView().getModel().getData("VeiculoSet"));
-			//this._toggleButtonsAndView(true);
 
 		},
 
@@ -127,8 +125,28 @@ sap.ui.define([
 			this.oRouter.navTo("master", {layout: sNextLayout});
 		},
 		handleFullScreen: function () {
-			var sNextLayout = this.oModel.getProperty("/actionButtonsInfo/endColumn/fullScreen");
-			this.oRouter.navTo("detail", {layout: sNextLayout});
+			var sNextLayout = this.oModel.getProperty("/actionButtonsInfo/midColumn/closeColumn");
+			this.oRouter.navTo("detail", {layout: sNextLayout})
+		},
+		onPress: function (oEvent) {
+			var sPath = this.getView().getElementBinding().getPath(),
+            sVeiculo = sPath.replace("/", "");
+			this.oRouter.navTo("multa", { layout: fioriLibrary.LayoutType.TwoColumnsMidExpanded, veiculo: sVeiculo });
+				return sVeiculo
+		},
+		formatDate: function () {
+
+				var oDateInput = this.getView().byId("dataInicio").getValue();
+				var oDateInput = this.getView().byId("dataFim").getValue();
+					 var sDateValue = oDateInput.getValue();
+						sDateValue = new Date(),
+						dia  = data.getDate().toString().padStart(2, '0'),
+						mes  = (data.getMonth()+1).toString().padStart(2, '0'), //+1 pois no getMonth Janeiro começa com zero.
+						ano  = data.getFullYear();
+					return dia+"/"+mes+"/"+ano;
+			
+				// sDateValue = sDateValue.split("/").reverse().join("").slice(0, 6);
+	
 		},
         onExit: function () {
             // this.oRouter.getRoute("master").detachPatternMatched(this._onProductMatched, this);

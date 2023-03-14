@@ -1,5 +1,5 @@
 <mvc:View
-  controllerName="template.ui5.controller.Edit"
+  controllerName="template.ui5.controller.Multa"
   xmlns="sap.m"
   xmlns:f="sap.f"
   xmlns:form="sap.ui.layout.form"
@@ -7,12 +7,12 @@
 
   <Page
     id="PageEdit"
-    title="Floating Footer Example"
+    title="Acompanhamento de multas"
     showNavButton="true"
     navButtonPress=".onNavBack"
     floatingFooter="true"
     class="sapUiResponsivePadding--header sapUiResponsivePadding--content sapUiResponsivePadding--footer sapUiResponsivePadding--floatingFooter">
-
+  
     <form:SimpleForm
       maxContainerCols="2"
       editable="false"
@@ -26,21 +26,27 @@
       width="25em"
       >
       <form:content>
-        <Label text="{i18n>Placa}" />
-        <Input value="{Nr_Placa}" />
-        <Label text="{i18n>Chassi}" />
-        <Input value="{Nr_Chassi}" id="placa" />
-        <Label text="{i18n>Renavam}" />
-        <Input value="{Nr_Renavam}" />
-        <Label text="{i18n>Modelo}" />
-        <Input value="{St_Modelo}" />
-        <Label text="{i18n>Locadora}" />
-        <Input value="{Ds_Locadora}" />
-        <Label text="{i18n>CentroCusto}" />
-        <Input value="{Nr_CentroCusto}" />
-        <Label text="{i18n>StatusVei}" />
+        <Label text="{i18n>cpf}" />
+        <Input value="{Nr_CpfNumber}" />
+        <Label text="{i18n>placa}" />
+        <Input value="{Nr_Placa}" id="placa" />
+        <Label text="{i18n>codInfra}" />
+        <Input value="{Ds_CodInfracao}" />
+        <Label text="{i18n>tipoInfra}" />
+        <Input value="{Ie_TipoInfracao}" />
+        <Label text="{i18n>DescTipoInfra}" />
+        <Input value="{Ds_DescTipoInfra}" />
+        <Label text="{i18n>Data}" />
+        <Input value="{DtData}" />
+        <Label text="{i18n>hora}" />
+        <Input value="{Hr_Hora}" />
+        <Label text="{i18n>vencimento}" />
+        <Input value="{Dt_Vencimento}" />
+        <Label text="{i18n>mesRecebido}" />
+        <Input value="{Nr_MesRecb}" />
+        <Label text="{i18n>valorMulta}" />
         <Input value="{Ds_DescStatusVeic}"/>
-        <Label text="{i18n>StatusCrlv}" />
+        <Label text="{i18n>descricao}" />
           <Input value="{Ds_DescStatusCrlv}"/>
       </form:content>
 

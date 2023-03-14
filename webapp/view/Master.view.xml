@@ -25,7 +25,7 @@
 				<Table
 					id="productsTable"
 					inset="false"
-					items="{ path: '/Customers', parameters: { 'expand': 'Orders' } }"
+					items="{ path: '/VeiculoSet'}"
 					class="sapFDynamicPageAlignContent"
 					width="auto">
 					<columns width="2rem" height="17rem">
@@ -33,22 +33,20 @@
 							<Text text="Status"/>
 						</Column>
 						<Column hAlign="End">
-							<Text text="Endereço"/>
+							<Text text="Locadora/Placa"/>
 						</Column>
 						<Column hAlign="End">
-							<Text text="Nome"/>
+							<Text text="Modelo"/>
 						</Column>
 						<Column hAlign="End">
-							<Text text="Cidade"/>
-						</Column>
-				
-						
+							<Text text="Modelo"/>
+						</Column>	
 					</columns>
 					<items>
 						<ColumnListItem type="Navigation" press=".onListItemPress">
 							<cells>
 								<core:Icon
-									src="{= ${Name} ? 'sap-icon://business-card' : 'sap-icon://car-rental'}"
+									src="{= ${HistoricoSet/Placa} ? 'sap-icon://business-card' : 'sap-icon://car-rental'}"
 									class="size4"
 									color="#1C4C98"
 									id="icon"
@@ -57,11 +55,9 @@
 										<FlexItemData growFactor="2" />
 									</core:layoutData>
 								</core:Icon>
-								<ObjectIdentifier title="{CompanyName}" text="{PostalCode}"/>
-								<ObjectIdentifier text="{ContactName}"/>
-								<ObjectIdentifier  title="{City}"/>
-								
-									
+								<ObjectIdentifier title="{Ds_Locadora}" text="{Nr_Placa}"/>
+								<ObjectIdentifier text="{St_Modelo}"/>
+								<ObjectIdentifier title="{Ds_DescStatusVeic}"/>								
 							</cells>
 						</ColumnListItem>
 						
