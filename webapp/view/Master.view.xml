@@ -25,7 +25,7 @@
 				<Table
 					id="productsTable"
 					inset="false"
-					items="{ path: '/VeiculoSet'}"
+					items="{ path: '/Customers'}"
 					class="sapFDynamicPageAlignContent"
 					width="auto">
 					<columns width="2rem" height="17rem">
@@ -55,9 +55,9 @@
 										<FlexItemData growFactor="2" />
 									</core:layoutData>
 								</core:Icon>
-								<ObjectIdentifier title="{Ds_Locadora}" text="{Nr_Placa}"/>
-								<ObjectIdentifier text="{St_Modelo}"/>
-								<ObjectIdentifier title="{Ds_DescStatusVeic}"/>								
+								<ObjectIdentifier title="{ContactName}" text="{ContactTitle}"/>
+								<ObjectIdentifier text="{Address}"/>
+								<ObjectIdentifier title="{City}"/>								
 							</cells>
 						</ColumnListItem>
 						

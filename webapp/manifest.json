@@ -102,6 +102,13 @@
 					"target": [
 						"edit"
 					]
+				},
+				{
+					"pattern": "Multa/{veiculo}",
+					"name": "multa",
+					"target": [
+						"multa"
+					]
 				}
 			],
 			"targets": {
@@ -118,6 +125,12 @@
 				"edit": {
 					"name": "Edit",
 					"controlAggregation": "midColumnPages"
+				},
+			
+				"multa": {
+					"name": "Multa",
+					"controlAggregation": "midColumnPages",
+					"viewName":"Multa"
 				}
 			}
 		
